@@ -47,13 +47,13 @@ height: auto;}
   outline: 1px solid teal;
 }
 @media screen and (min-width: 482px)
-   { .container{max-width: 482px;}  }
+   { .container {max-width: 482px;}  }
 
 @media screen and (min-width: 768px) 
-   { .container{max-width: 768px;}  }
+   { .container {max-width: 768px;}  }
 
 @media screen and (min-width: 1158px) 
-   { .container{max-width: 1158px;
+   { .container {max-width: 1158px;
  padding-left: 15px;
   padding-right: 15px;}   }
 
@@ -560,15 +560,32 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
 /* ========= FOOTER ========= */
 .footer-section
 {background-color: var(--main-text-color);
-padding: 100px 0 ;
-}
-.footer-container {display: flex;
-align-items: baseline;
-/* outline: 1px dashed tomato; */
+  padding-top: 96px;
+  padding-bottom: 96px;
+
+/* padding: 100px 0 ; */
 }
 
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 72px 24px;
+
+  /* align-items: baseline; */
+  /* outline: 1px dashed tomato; */  
+}
+
+@media only screen and (max-width: 767px)
+{ .footer-container
+  { text-align: center;}
+}
+
+
 .foot-logo-container
-{margin-right: 120px;}
+{ 
+ 
+}
 
 .logo-foot
 {font-family: 'Raleway', sans-serif;
@@ -580,15 +597,13 @@ align-items: baseline;
   color: var(--iris-btn-background);
 display: inline-block;
 margin-bottom: 16px;
-
 }
-
   .footer-logo
   {font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 18px;
     line-height: 1.17;
-         letter-spacing: 0.03em;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
       color: var(--cloud-suptitle-light);}
 
@@ -598,14 +613,17 @@ margin-bottom: 16px;
     line-height: 1.5; 
     letter-spacing: 0.02em;
     color: var(--cloud-suptitle-light);
-  width: 264px;}
+    width: 268px;
+    text-align: center;
+  }
 /* ____________ footer social ____________ */
 .social-container
-{margin-right: 80px;}
+{ 
+
+}
 
   .footer-social-suptitle
-  {margin-bottom: 16px;
-
+  { margin-bottom: 16px;
     font-size: 16px;
      font-weight: 500;
     line-height: 1.5;
@@ -614,7 +632,8 @@ margin-bottom: 16px;
 
   .social-list-foot
   {display: flex;
-  gap: 16px;}
+  gap: 16px;
+}
 
   .social-link-foot
   {display: flex;
@@ -627,7 +646,7 @@ background-color: var(--iris-btn-background);
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 
 .social-icon-foot
-{fill: var(--cloud-suptitle-light);
+{  fill: var(--cloud-suptitle-light);
 
 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
 background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
@@ -637,6 +656,9 @@ background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 {background-color: var(--green-hover-icons);}
 
 /* ---------- Subscribe_footer ----------- */
+.subscribe-container 
+{width: 100%;}
+
 .subscribe-suptitle
 {margin-bottom: 16px;
 
@@ -648,10 +670,15 @@ background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 
 .subscribe-form
 {display: flex;
-gap: 24px;}
+  flex-wrap: wrap;
+  justify-content: center;
+gap: 16px;}
+
+.subscribe-label
+{width: 100%;}
 
     .subscribe-input
-    {width: 264px;
+    {width: 100%;
     height: 40px;
 padding: 8px 16px;
 color: var(--main-bg-color);
@@ -684,7 +711,7 @@ filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
       align-items: center;
     gap: 16px;
       padding: 8px 24px;
-    min-width: 165px;
+   max-width: 398px;
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     border-radius: 4px;
