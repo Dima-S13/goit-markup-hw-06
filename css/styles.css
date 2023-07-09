@@ -581,11 +581,22 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
   { text-align: center;}
 }
 
+@media only screen and (min-width: 768px) {
+  .footer-container {
+    padding: 0 108px;
+    text-align: center;
+  }
+}
+
+ @media only screen and (min-width: 1158px)
+ {.footer-container 
+  {display: flex;
+    justify-content: space-between;
+  flex-wrap: nowrap;
+padding: 0 15px;}}
 
 .foot-logo-container
-{ 
- 
-}
+{ }
 
 .logo-foot
 {font-family: 'Raleway', sans-serif;
@@ -657,7 +668,8 @@ background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 
 /* ---------- Subscribe_footer ----------- */
 .subscribe-container 
-{width: 100%;}
+{ max-width: 453px;
+  width: 100%;}
 
 .subscribe-suptitle
 {margin-bottom: 16px;
@@ -668,14 +680,21 @@ background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
   letter-spacing: 0.32px;
   color: var(--main-bg-color);}
 
+    @media only screen and (min-width: 768px)
+    {.subscribe-suptitle {text-align: left;}}
+
 .subscribe-form
 {display: flex;
   flex-wrap: wrap;
   justify-content: center;
 gap: 16px;}
 
+@media only screen and (min-width: 768px)
+{.subscribe-form {flex-wrap: nowrap;}}
+
 .subscribe-label
-{width: 100%;}
+{width: 100%;
+max-width: 398px;}
 
     .subscribe-input
     {width: 100%;
@@ -694,6 +713,11 @@ filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 font-size: 12px;
 line-height: 1.5;
 letter-spacing: 0.04em;}
+
+@media only screen and (min-width: 768px)
+{ .subscribe-input {max-width: 264px;}
+  
+}
 
 .subscribe-input::placeholder
 {padding: 8px 0;
