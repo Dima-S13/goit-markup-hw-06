@@ -89,5 +89,11 @@ d="M4 1h24c1.657 0 3 1.343 3 3v24c0 1.657-1.343 3-3 3h-24c-1.657 0-3-1.343-3-3v-
 <symbol id="icon-checkmark" viewBox="0 0 32 32">
 <path d="M27 4l-15 15-7-7-5 5 12 12 20-20z"></path>
 </symbol>
+<symbol id="icon-humburger" viewBox="0 0 47 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4.3636" d="M1.96 29.154h42.965M1.96 15.615h42.965M1.96 2.077h42.965"></path>
+</symbol>
+<symbol id="icon-stack" viewBox="0 0 32 32">
+<path d="M32 10l-16-8-16 8 16 8 16-8zM16 4.655l10.689 5.345-10.689 5.345-10.689-5.345 10.689-5.345zM28.795 14.398l3.205 1.602-16 8-16-8 3.205-1.602 12.795 6.398zM28.795 20.398l3.205 1.602-16 8-16-8 3.205-1.602 12.795 6.398z"></path>
+</symbol>
 </defs>
 </svg>
