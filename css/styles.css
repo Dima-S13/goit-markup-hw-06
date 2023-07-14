@@ -67,10 +67,10 @@ box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
  0px 1px 1px 0px rgba(46, 47, 66, 0.16),
  0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 
-  position: sticky;
+  /* position: sticky;
     top: -1px;
     z-index: 999;
-    background-color: var(--main-bg-color);
+    background-color: var(--main-bg-color); */
   }
    
    .header-container 
@@ -325,6 +325,13 @@ max-width: 328px;}
       transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);   }
 
+        @media only screen and (min-width: 768px) and (max-width: 1157px)
+        { .header-contacts
+          {  font-size: 12px;
+             line-height: 14px; 
+            letter-spacing: 0.48px;}
+                 }
+
         /* ========= HERO ========= */
 
  .hero-section
@@ -336,30 +343,26 @@ max-width: 328px;}
   background-size: cover;
 
   padding: 112px 0;
-  min-width: 320px;
   max-width: 428px;
   margin: 0 auto;   }  
 
-    @media screen (min-device-pixel-ratio: 2) and (min-width: 428px) and (max-width: 767px),
-    screen and (min-resolution: 192dpi) and (min-width: 428px) and (max-width: 767px),
-    screen and (min-resolution: 2dppx) and (min-width: 428px) and (max-width: 767px)
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)
     {  .hero-section {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), 
     rgba(46, 47, 66, 0.7)), url(../images/mobile-bg-2x.jpg); } }
 
-    @media only screen (min-width: 428px) and (min-width: 768px) {
+    @media only screen and (min-width: 768px) {
      .hero-section {
        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-           rgba(46, 47, 66, 0.7)), url(../images/tablet-bg-1x.jpg);
-     
-           padding: 188px 0;   }}
+       rgba(46, 47, 66, 0.7)), url(../images/tablet-bg-1x.jpg);
+       max-width: 768px;
+       padding: 188px 0; 
+        }
 
-  @media screen (min-device-pixel-ratio: 2) (min-width: 428px) and (min-width: 768px),
-  screen and (min-resolution: 192dpi) (min-width: 428px) and (min-width: 768px),
-  screen and (min-resolution: 2dppx) (min-width: 428px) and (min-width: 768px) {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .hero-section 
     { background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)), url(../images/tablet-bg-2x.jpg);  }   }
+       rgba(46, 47, 66, 0.7)), url(../images/tablet-bg-2x.jpg);  }   } }
 
  .hero-title
  {max-width: 320px;
@@ -388,14 +391,14 @@ margin-bottom: 72px;}
      rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);}
   
   .hero-title 
-  {margin-bottom: 48px;}  }
+  {margin-bottom: 48px;}  
 
-  @media screen (min-device-pixel-ratio: 2) and (min-width: 1158px) and (max-width: 1440px),
-  screen and (min-resolution: 192dpi) and (min-width: 1158px) and (max-width: 1440px),
-  screen and (min-resolution: 2dppx) and (min-width: 1158px) and (max-width: 1440px) {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .hero-section {
       background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-       rgba(46, 47, 66, 0.7)), url(../images/people-office-2x.jpg);  }  }
+       rgba(46, 47, 66, 0.7)), url(../images/people-office-2x.jpg);  
+      
+      max-width: 1440px; }  } }
 
 
     .hero-btn
@@ -436,17 +439,17 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   .advantages-list
   {display: flex;
-  flex-direction: column;
-gap: 72px;}
+  flex-wrap: wrap;
+gap: 72px 24px;}
 
     .advantages-item {
       max-width: 396px;
       width: 100%;
         }
   
-  .advantages-item:not(:last-child) {
-    /* margin-bottom: 72px; */
-  }
+  /* .advantages-item:not(:last-child) {
+    margin-bottom: 72px;
+  } */
 
     .advantages-title {
       text-align: center;
@@ -503,7 +506,7 @@ gap: 72px;}
   .advantages-list 
   { display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 72px 24px;
   text-align: start;
 }
 
@@ -533,8 +536,9 @@ gap: 72px;}
       flex-wrap: nowrap;
    gap: 24px; }
 
-     .advantages-suptitle
-     {width: 264px;}
+     .advantages-suptitle 
+     {width: 264px;
+    font-weight: 400;}
     }
 
            /* ========= ACTIVITY ========= */
